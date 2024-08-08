@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Actividad1.Models
 {
-    internal class Cocina
+    internal class Amasador
     {
-       public Alacena Alacena { get; private set; }
-
-        public  Cocina(Alacena a)
+        public Amasador() { }   
+        public double crearMasa (double harina)
         {
-            this.Alacena = a;
+            double masa = harina * 1.3;
+            return masa;
         }
     }
 }
