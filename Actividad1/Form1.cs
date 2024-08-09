@@ -23,8 +23,9 @@ namespace Actividad1
         private void btnCliente_Click(object sender, EventArgs e)
         {
             Alacena alacena = new Alacena();
+            Amasador amasador = new Amasador();
 
-            miCocina = new Cocina(alacena);
+            miCocina = new Cocina(alacena, amasador);
             
             
         }
@@ -39,10 +40,10 @@ namespace Actividad1
         private void btnCocinar_Click(object sender, EventArgs e)
         {
             Alacena a = miCocina.Alacena;
-            //double harina = ConvertToduble(tbxharina.text);
-            //double fruta = ConvertToDOuble(tbxfruta.Text);
-            //double h = a.TOmarHarina(harina)
-            //double f = a.TomarFruta(fruta)
+            double harina = Convert.ToDouble(tbxharina.Text);
+            double fruta = Convert.ToDouble(tbxfruta.Text);
+            double h = a.TomarHarina(harina);
+            double f = a.tomarFruta(fruta);
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Actividad1.Models
 {
     internal class Alacena
     {
-        
-        public double  Harina { get; private set; }
+
+        public double Harina { get; private set; }
 
         public void ReponerHarina(double cantidad)
         {
@@ -20,7 +20,7 @@ namespace Actividad1.Models
         {
             this.Fruta = cantidad;//Fruta+= cantidad
         }
-        public double TomarHarina (double requerido)
+        public double TomarHarina(double requerido)
         {
             if (requerido <= Harina)
             {
@@ -34,6 +34,22 @@ namespace Actividad1.Models
                 return restante;
             }
         }
-    }
 
+        public double tomarFruta(double requerido)
+        {
+            double devuelto = 0;
+            if (devuelto <= Fruta)
+            {
+                Fruta -= requerido;
+                return requerido;
+            }
+            else
+            {
+                double restante = Fruta;
+                Fruta = 0;
+                return restante;
+
+            }
+        }
+    }
 }
